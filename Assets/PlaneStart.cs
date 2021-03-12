@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlaneStart : MonoBehaviour
 {
-    public GameObject gameObject;
+    
     // Start is called before the first frame update
     void Start()
     {
