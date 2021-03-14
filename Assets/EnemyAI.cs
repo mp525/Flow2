@@ -5,12 +5,14 @@
  using System.Collections;
  
  public class EnemyAI : MonoBehaviour {
+    public AudioClip[] clips;
 
      float distance =22;
      private NavMeshAgent agent;
       private GameObject player;
       Animator anim;
         void Start(){
+            
             anim =GetComponent<Animator>();
             player= GameObject.FindGameObjectWithTag("Player");;
      }
@@ -41,6 +43,10 @@
         //Make animation
 
         anim.SetBool("Close",true);
+            
+        SoundManager.Instance.RandomSoundEffect(clips);
+            
+        
         Debug.Log("arrrrrrg clap clap clap");
 
     }else
