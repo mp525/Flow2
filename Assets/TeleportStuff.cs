@@ -18,7 +18,7 @@ public class TeleportStuff : MonoBehaviour
               this.transform.position = tp2.transform.position;
          }
          if (other.gameObject.tag == "Win"){
-          SceneManager.LoadScene (1);
+          SceneManager.LoadScene (2);
          }
     }
 }
