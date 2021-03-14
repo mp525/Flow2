@@ -1,12 +1,10 @@
  using UnityEngine;
- using System.Collections;
- using UnityEngine.SceneManagement;
+
 using UnityEngine.UI;
  public class Respawn : MonoBehaviour {
  
      public GameObject spawnPoint;
-     public GameObject tp;
-     public GameObject tp2;
+     
 
      private int currentHealth = 100; 
     private int maxhealth = 100; 
@@ -53,19 +51,15 @@ using UnityEngine.UI;
         }
              
          }
-
-
-         if(other.transform.tag == "TP")
+         if(other.transform.tag == "health")
          {
-              this.transform.position = tp.transform.position;
-         }
+            healthDisplay.SetCurrentHealth(healthDisplay.GetCurrentHealth()+50);
+            if (healthDisplay.GetCurrentHealth()>100)
+            {
+               healthDisplay.SetCurrentHealth(100);
 
-         if(other.transform.tag == "l")
-         {
-              this.transform.position = tp2.transform.position;
-         }
-         if (other.gameObject.tag == "Win"){
-          SceneManager.LoadScene (1);
+            }
+            
          }
     }
     public void TakeDamage(int damage)
