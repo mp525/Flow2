@@ -59,7 +59,7 @@ using UnityEngine.UI;
                healthDisplay.SetCurrentHealth(100);
 
             }
-            
+            other.transform.gameObject.SetActive(false);
          }
     }
     public void TakeDamage(int damage)
