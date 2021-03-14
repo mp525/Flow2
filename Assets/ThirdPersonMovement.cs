@@ -51,13 +51,13 @@ public class ThirdPersonMovement : MonoBehaviour
             anim.ResetTrigger("Jump");
            
         }
-        if(Input.GetKey(KeyCode.E)){
+        /* if(Input.GetKey(KeyCode.E)){
             anim.SetTrigger("Smash");
         }
         if(Input.GetKeyUp(KeyCode.E)){
             anim.ResetTrigger("Smash");
            
-        }
+        } */
             
     }
 
