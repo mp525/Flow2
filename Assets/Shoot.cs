@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.AI;
 public class Shoot : MonoBehaviour
 {
     public float damage=10f;
@@ -31,7 +31,17 @@ public class Shoot : MonoBehaviour
         if(Physics.Raycast(fpsCam.transform.position,fpsCam.transform.forward,out hit, range)){
 
            if( hit.transform.name.Contains("Zombie")){
-                hit.transform.gameObject.SetActive(false);
+               if (hit.transform.gameObject.GetComponent<NavMeshAgent>().isStopped==false)
+               {
+
+                hit.transform.gameObject.GetComponent<NavMeshAgent>().isStopped=true;
+                    hit.transform.gameObject.GetComponent<Animator>().SetBool("hurt",true);
+
+               }else{
+                    hit.transform.gameObject.GetComponent<Animator>().SetBool("dead",true);
+
+               }
+               // hit.transform.gameObject.SetActive(false);
 
            }else
            {
