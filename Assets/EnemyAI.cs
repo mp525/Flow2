@@ -47,7 +47,6 @@
         SoundManager.Instance.RandomSoundEffect(clips);
             
         
-        Debug.Log("arrrrrrg clap clap clap");
 
     }else
     {
