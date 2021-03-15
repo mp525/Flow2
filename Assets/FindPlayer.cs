@@ -21,9 +21,9 @@ public class FindPlayer : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-
+        
         agent.speed = runSpeed;
-        agent.destination = player.transform.position;
+        agent.destination = GameObject.FindWithTag("Player").transform.position;
         anim.SetFloat("Speed", runSpeed);
     }
 }
