@@ -5,14 +5,14 @@ I Have used.
 
 Prefabs + parenting, 3D Modelling, textures, mats, UV mapping, Rendering Pipeline,UI, Animations, Animator & (not really IK),Game Design,Level Design,Game Mechanics and Features(det at man ikke altid dræber zombie, af en eller anden grund haha)
 (Ragdolls at first then I changed it to be an animation so I don't know if it counts) + everything from flow 1.
-- zombie AI med navmesh.
-- StartRoom pick level system.
-- Health system and UI.
-- Shooting mechanic
-- zombie animation/hurt/death
-- level design, a lot of models made in blender
-- plane and other moving objects (movement)
-- Probably more that i can't remember.
+- zombie AI med navmesh, tried to modify the where they walk when player is not near and it worked somewhat, I would like to make it better in the next project.
+- StartRoom pick level system, works with my level but has a weird effect on mathias level it seems, the demons don't know where the player is i guess.
+- Health system and UI, taking inspiration from your version and making it fit in my game.
+- Shooting mechanic, having a bit trouble making it work every time.
+- zombie animation idle/run/death
+- level design, a lot of models made in blender, my blender skills is a work in progress a little week by week,
+- plane and other moving objects (movement) Where i have used lerping.
+
 
 
 Mathias
