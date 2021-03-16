@@ -3,7 +3,7 @@ Matti
 
 I Have used.
 
-Prefabs + parenting, 3D Modelling, textures, mats, UV mapping, Rendering Pipeline,UI, Animations, Animator & (not really IK),Game Design,Level Design,Game Mechanics and Features
+Prefabs + parenting, 3D Modelling, textures, mats, UV mapping, Rendering Pipeline,UI, Animations, Animator & (not really IK),Game Design,Level Design,Game Mechanics and Features(det at man ikke altid dræber zombie, af en eller anden grund haha)
 (Ragdolls at first then I changed it to be an animation so I don't know if it counts) + everything from flow 1.
 - zombie AI med navmesh.
 - StartRoom pick level system.
