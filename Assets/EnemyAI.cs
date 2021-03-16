@@ -14,7 +14,7 @@
         void Start(){
             
             anim =GetComponent<Animator>();
-            player= GameObject.FindGameObjectWithTag("Player");;
+            player= GameObject.FindGameObjectWithTag("Gunman");;
      }
  void Update(){
 
