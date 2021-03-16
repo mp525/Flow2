@@ -6,25 +6,15 @@ using UnityEngine.AI;
 public class Blast : MonoBehaviour
 {
     [SerializeField] private GameObject explosionPrefab;
-    [SerializeField] private float blastRadius = 5f;
+    [SerializeField] private float blastRadius = 6f;
     //[SerializeField] private float proximityRadius = 1.5f;
     [SerializeField] private float explosionForce = 10005f;
     public LayerMask targetLayerMask = new LayerMask();
 
     public Animator anim;
-    void FixedUpdate() 
-    {
-        //var colliders = Physics.OverlapSphere(transform.position, proximityRadius, targetLayerMask);
-        
-        /* if (colliders.Length > 0)
-        {
-            Explode();
-        } */
-
-    }
+    
     public void SmashEvent(string s){
-        //Debug.Log("PrintEvent: " + s + " called at: " + Time.time);
-        // Spawn and destroy explosion after 3 seconds
+        
         Destroy(Instantiate(explosionPrefab, transform.position, Quaternion.identity), 3.0f);
         Explode();
     }
@@ -71,7 +61,6 @@ public class Blast : MonoBehaviour
                 rigidbody.AddForce(dir * explosionForce, ForceMode.Impulse);
             }
 
-            // Destroy the mine gameobject
-            //Destroy(gameObject);
+            
     }
 }

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
 public class LanternTrigger : MonoBehaviour
 {
     public BoxCollider collider;
@@ -20,10 +21,11 @@ public class LanternTrigger : MonoBehaviour
 
     public GameObject win;
 
+     public AudioSource audioData;
 
     void Start()
     {
-        
+        //audioData = GetComponent<AudioSource>();
     }
 
     void FixedUpdate(){
@@ -36,6 +38,7 @@ public class LanternTrigger : MonoBehaviour
     }
 
     public void Dissappear(){
+        audioData.Play();
         var colliders = Physics.OverlapSphere(transform.position, proximityRadius, targetLayerMask);
         if (colliders.Length == 0) return;
 

@@ -1,18 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Losing : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+
+    public GameObject lose;
+
+    void OnTriggerEnter(Collider collider)
     {
-        
+        Debug.Log("Collision with: " + collider.gameObject.name);
+        if(collider.gameObject.layer == 3 || collider.gameObject.tag == "Enemy"){
+            Lose();
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    void Lose()
     {
-        
+        Debug.Log("lost");
+        Time.timeScale = 0;
+        lose.SetActive(true);
     }
 }

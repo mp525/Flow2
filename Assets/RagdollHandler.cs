@@ -25,6 +25,7 @@ public class RagdollHandler : MonoBehaviour
             GetComponent<Animator>().enabled = false;
             GetComponent<FindPlayer>().enabled = false;
             GetComponent<NavMeshAgent>().enabled = false;
+            Destroy(gameObject, 3);
         }
 
         Rigidbody[] rigidbodies = GetComponentsInChildren<Rigidbody>();
@@ -36,5 +37,6 @@ public class RagdollHandler : MonoBehaviour
                 rb.isKinematic = !v;
             }
         }
+        
     }
 }
