@@ -21,7 +21,7 @@ public class LanternTrigger : MonoBehaviour
 
     public GameObject win;
 
-     public AudioSource audioData;
+     //public AudioSource audioData;
 
     void Start()
     {
@@ -38,7 +38,7 @@ public class LanternTrigger : MonoBehaviour
     }
 
     public void Dissappear(){
-        audioData.Play();
+        //audioData.Play();
         var colliders = Physics.OverlapSphere(transform.position, proximityRadius, targetLayerMask);
         if (colliders.Length == 0) return;
 
