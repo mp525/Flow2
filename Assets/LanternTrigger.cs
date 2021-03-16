@@ -21,6 +21,8 @@ public class LanternTrigger : MonoBehaviour
 
     public GameObject win;
 
+    public GameObject portalWin;
+
      //public AudioSource audioData;
 
     void Start()
@@ -49,7 +51,7 @@ public class LanternTrigger : MonoBehaviour
         if(next.name.Equals("WinSpawn")){
             player.transform.position = winSpawn.transform.position;
             win.SetActive(true);
-            
+            portalWin.SetActive(true);
         }
 
         next.SetActive(true);

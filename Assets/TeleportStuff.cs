@@ -19,6 +19,7 @@ public class TeleportStuff : MonoBehaviour
          }
          if (other.gameObject.tag == "Win"){
           SceneManager.LoadScene (2);
+          Destroy(gameObject);
          }
     }
 }
